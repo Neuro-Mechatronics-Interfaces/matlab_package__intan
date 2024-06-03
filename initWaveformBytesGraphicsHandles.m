@@ -17,9 +17,9 @@ arguments
     options.ColorMapAmplifier (:,3) double {mustBeInRange(options.ColorMapAmplifier,0,1)} = jet(16);
     options.ColorMapAnalog (:,3) double {mustBeInRange(options.ColorMapAnalog,0,1)} = hsv(8);
     options.ColorMapDigital (:,3) double {mustBeInRange(options.ColorMapDigital,0,1)} = autumn(2);
-    options.TriggerXLim (1,2) double {mustBeInteger} = [-40, 200]; % Samples
-    options.TriggerBit (1,1) double {mustBeInteger, mustBeMember(options.TriggerBit, 0:15)} = 1;
-    options.TriggerResponseEpoch (1,2) double {mustBeInteger, mustBePositive} = [60, 180];
+    options.TriggerXLim (1,2) double {mustBeInteger} = [-40, 120]; % Samples
+    options.TriggerBit (1,1) double {mustBeInteger, mustBeMember(options.TriggerBit, 0:15)} = 2;
+    options.TriggerResponseEpoch (1,2) double {mustBeInteger, mustBePositive} = [40, 100];
 end
 
 if rem(options.NumPointsToPlot,128) > 0
