@@ -23,7 +23,7 @@ end
 write(intanTcpClient, uint8('execute clearalldataoutputs')); 
 for channelIndex = channels
     write(intanTcpClient, uint8(sprintf('set %s-%03d.enabled true', lower(portLetter), channelIndex)));
-    write(intanTcpClient, uint8(sprintf('set %s-%03d.recordingenabled true', lower(portLetter), channelIndex)));
+    % write(intanTcpClient, uint8(sprintf('set %s-%03d.recordingenabled true', lower(portLetter), channelIndex)));
     if options.EnableTCP
         write(intanTcpClient, uint8(sprintf('set %s-%03d.tcpdataoutputenabled%s true', ...
             lower(portLetter), channelIndex, s)));

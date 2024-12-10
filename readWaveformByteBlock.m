@@ -16,7 +16,7 @@ arguments
     options.BlocksPerRead (1,1) {mustBePositive, mustBeInteger} = 100;
     options.SampleRate (1,1) {mustBePositive} = 20000; % 
     options.NumBandsPerChannel (1,1) {mustBeMember(options.NumBandsPerChannel,[1,2,3])} = 1;
-    options.MagicNumber (1,1) = 0x2ef07a08;
+    options.MagicNumber (1,1) = 0x2ef07a08; % Note that this is different for Waveform TCP client vs Spikes TCP client!!!
 end
 
 timestep = 1/options.SampleRate;
